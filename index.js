@@ -1,12 +1,19 @@
 var _ = require("lodash");
 var Q = require("q");
+var EventEmitter = require('events').EventEmitter;
+var util = require('util');
 
-var JobWorker = function() {
+function JobWorker(script) {
+    this.options = _.defaults(
+        (_.isString(script)? { script: script } : script) || {},
+        {}
+    );
+
     this.worker = null;
     this.workerLoading = null;
     this.methods = {};
-}
-
+};
+util.inherits(JobWorker, EventEmitter);
 
 // Init caller worker
 JobWorker.prototype.getRemoteWorker = function() {
@@ -27,7 +34,7 @@ JobWorker.prototype.getRemoteWorker = function() {
         if (e.data.message == "ready") {
             d.resolve(that.worker);
         } else {
-            that.trigger("task:"+e.data.id, e.data);
+            that.emit("task:"+e.data.id, e.data);
         }
     }, false);
 
