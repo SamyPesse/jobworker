@@ -1,0 +1,14 @@
+{
+    "name": "jobworker",
+    "description": "Webworker background job queue",
+    "version": "0.0.0",
+    "main": "./index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SamyPesse/jobworker.git"
+    },
+    "dependencies": {
+        "q": ">=1.2.0",
+        "lodash": ">=3.0.0"
+    }
+}
