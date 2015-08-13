@@ -16,7 +16,7 @@ Create a web-worker "myworker.js" using:
 ```js
 var JobWorker = require("jobworker");
 
-var worker = new JobWorker();
+var worker = new JobWorker.WebWorker();
 
 // Register some methods
 worker.register({
@@ -41,9 +41,7 @@ worker.run();
 And in your application, access the web-worker using:
 
 ```js
-var worker = new JobWorker({
-    script: "myworker.js"
-});
+var worker = new JobWorker.WebWorker("myworker.js");
 
 
 // Call a method

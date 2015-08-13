@@ -2,7 +2,7 @@
     "name": "jobworker",
     "description": "Webworker background job queue",
     "version": "1.0.0",
-    "main": "./index.js",
+    "main": "./lib/index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/SamyPesse/jobworker.git"
