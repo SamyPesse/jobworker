@@ -35,7 +35,7 @@ server.register({
 
 it('should fail with timeout if server is not started', function() {
     return client.callMethod('testSync', 1, 2)
-    .should.be.rejectedWith('Max retry to connect to worker failed');
+    .should.be.rejectedWith('Failed to connect to worker');
 });
 
 it('should correctly start client and server', function() {
