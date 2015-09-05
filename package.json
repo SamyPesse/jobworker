@@ -1,7 +1,7 @@
 {
     "name": "jobworker",
-    "description": "Webworker background job queue",
-    "version": "2.0.0",
+    "description": "WebWorker background job worker",
+    "version": "3.0.0",
     "main": "./lib/index.js",
     "repository": {
         "type": "git",
