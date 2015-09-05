@@ -12,8 +12,7 @@
         "lodash": ">=3.0.0"
     },
     "devDependencies": {
-        "mocha": "2.2.1",
-        "should": "5.2.0"
+        "mocha": "2.2.1"
     },
     "scripts": {
         "test": "node_modules/.bin/mocha --reporter spec --timeout 15000"
