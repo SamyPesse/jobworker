@@ -48,6 +48,13 @@ it('should correctly call a sync method', function() {
     .should.finally.be.exactly(7);
 });
 
+it('should correctly  return a binded method', function() {
+    var testSync = client.method('testSync');
+
+    return testSync(4, 4)
+    .should.finally.be.exactly(12);
+});
+
 it('should correctly call an async method', function() {
     return client.callMethod('testAsync', 1, 2)
     .should.finally.be.exactly(5);
