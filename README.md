@@ -14,12 +14,12 @@ $ npm install jobworker
 Create a web-worker "myworker.js" using:
 
 ```js
-var JobWorker = require("jobworker");
+var jw = require("jobworker");
 
-var worker = new JobWorker.WebWorker();
+var server = new jw.WebWorkerServer();
 
 // Register some methods
-worker.register({
+server.register({
     // Task can be sync
     hello: function() {
         return "World";
@@ -35,13 +35,15 @@ worker.register({
 });
 
 // Run the worker
-worker.run();
+server.start();
 ```
 
 And in your application, access the web-worker using:
 
 ```js
-var worker = new JobWorker.WebWorker("myworker.js");
+var jw = require("jobworker");
+
+var worker = new jw.WebWorkerServer("myworker.js");
 
 
 // Call a method
