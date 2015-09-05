@@ -47,7 +47,7 @@ And in your application, access the web-worker using:
 ```js
 var jw = require("jobworker");
 
-var worker = new jw.WebWorkerServer("myworker.js");
+var worker = new jw.WebWorkerClient("myworker.js");
 
 
 // Call a method
