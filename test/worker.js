@@ -1,12 +1,15 @@
 var Q = require('q');
 var should = require('should');
+var EventEmitter = require('events').EventEmitter;
 require('should-promised');
 
 var jw = require('../');
-var memoryWk = require('../lib/memory');
+var eventsWk = require('../lib/events');
 
-var server = jw.Server(memoryWk.Server());
-var client = jw.Client(memoryWk.Client(), {
+
+var events = new EventEmitter();
+var server = jw.Server(eventsWk.Server(events));
+var client = jw.Client(eventsWk.Client(events), {
     waitInterval: 100,
     maxWaitTillReady: 3
 });

@@ -1,7 +1,11 @@
 JobWorker
 =============================
 
-> Utility to create a job queue in a webworker
+[![NPM version](https://badge.fury.io/js/jobworker.svg)](http://badge.fury.io/js/jobworker)
+[![Build Status](https://travis-ci.org/SamyPesse/jobworker.png?branch=master)](https://travis-ci.org/SamyPesse/jobworker)
+
+
+JobWorker is an utility to create background job workers. This module provides a transport to work with `WebWorker`, but can also be transport agnostic.
 
 ## Installation
 
@@ -9,7 +13,7 @@ JobWorker
 $ npm install jobworker
 ```
 
-### Documentation
+### Usage
 
 Create a web-worker "myworker.js" using:
 
@@ -55,4 +59,8 @@ worker.callMethod("hello")
 // Or create a binded nethod:
 var testAsync = worker.method("testAsync");
 ```
+
+### Custom Transport
+
+[Events](https://github.com/SamyPesse/jobworker/tree/master/lib/events) and [WebWorker](https://github.com/SamyPesse/jobworker/tree/master/lib/webworker) are good examples on how to write a custom transport.
 
