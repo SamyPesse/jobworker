@@ -8,8 +8,8 @@
         "url": "https://github.com/SamyPesse/jobworker.git"
     },
     "dependencies": {
-        "q": ">=1.2.0",
-        "lodash": ">=3.0.0"
+        "q": "^1.2.0",
+        "lodash": "^4.13.1"
     },
     "devDependencies": {
         "mocha": "2.2.1",
